@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext'
 export default function LoginPage() {
   const { login } = useAuth()
   const navigate = useNavigate()
-  const [email, setEmail] = useState('demo@sales.com')
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
@@ -54,7 +54,6 @@ export default function LoginPage() {
         <p className="muted">
           ยังไม่มีบัญชี? <Link to="/register">สมัครสมาชิก</Link>
         </p>
-        <p className="hint">บัญชีทดลอง: demo@sales.com / demo123</p>
       </form>
     </div>
   )
